@@ -1,0 +1,86 @@
+body {
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: orangered;
+}
+
+h1 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#pokedex {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+#card {
+  list-style: none;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 20px;
+}
+
+#card:hover {
+  animation: bounce 2s linear;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: row;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-items: center;
+  margin-top: -70px;
+  justify-content: center;
+}
+
+#pokemon-name {
+  font-size: 30px;
+  padding: 5px;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+h2 {
+  margin-top: 24px;
+  padding: 0;
+  line-height: 1;
+}
+
+img {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  height: 180px;
+  margin: 0 auto;
+}
+
+#pokemon-type {
+  font-weight: lighter;
+  color: #666;
+  margin-top: 5px;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  white-space: nowrap;
+  margin: 80px auto;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
