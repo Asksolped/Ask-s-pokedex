@@ -17,6 +17,8 @@ const fetchPokemon = async () => {
   displayPokemon(pokemon);
 };
 
+/* creating html elements */
+
 const displayPokemon = (pokemon) => {
   pokemon.forEach((poke) => {
     const li = document.createElement("li");
@@ -31,10 +33,14 @@ const displayPokemon = (pokemon) => {
     spanName.textContent = poke.name;
     spanType.textContent = `Type: ${poke.type}`;
 
+    /* add classes and ID's to the different elements */
+
     spanName.id = `pokemon-name`;
     spanType.id = `pokemon-type`;
     li.id = `card`;
     nameContainer.className = "nameContainer";
+
+    /* DOM manipulation */
 
     li.appendChild(img);
     nameContainer.appendChild(h2);
